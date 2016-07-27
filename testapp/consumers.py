@@ -3,10 +3,10 @@
 import json
 import datetime
 
-from channels.sessions import channel_session
+from channels.sessions import channel_session, enforce_ordering
 from channels.auth import channel_session_user, channel_session_user_from_http
 
-
+@enforce_ordering(slight=True)
 @channel_session_user_from_http
 def ws_on_connect(message):
     ip, port = message.content.get('client')
@@ -20,6 +20,7 @@ def ws_on_connect(message):
     print
 
 
+@enforce_ordering(slight=True)
 @channel_session_user
 def ws_on_message(message):
     payload = json.loads(message['text'])

@@ -6,9 +6,7 @@ function log(msg) {
 
 ws.on('connected', function(e, resp){
   log('Socket <b>connected</b>, querying current user')
-  setTimeout(function(){
-    ws.send({command: 'get-user'});
-  }, 500);
+  ws.send({command: 'get-user'});
 });
 
 ws.on('on-get-user', function(e, resp){
