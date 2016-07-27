@@ -1,0 +1,7 @@
+requests==2.10.0
+Django==1.9.8
+daphne==0.12.1
+asgiref==0.13.3
+Twisted==16.2.0
+git+https://github.com/andrewgodwin/asgi_redis.git@62051f0c983289dacff4f601bfca09122459272d#egg=asgi_redis
+git+https://github.com/andrewgodwin/channels.git@66c4b0cb6765addb75d9258f5a36c0145c4c172d#egg=channels

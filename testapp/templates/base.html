@@ -1,0 +1,16 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    {% block scripts %}
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static "testapp/js/ws.js" %}"></script>
+    <script type="text/javascript" src="{% static "testapp/js/main.js" %}"></script>
+    {% endblock %}
+  </body>
+</html>
+
